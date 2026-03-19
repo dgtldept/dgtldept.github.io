@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-00XHYRHCX4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-00XHYRHCX4');
+</script>
+<title>dgtl dept* — Marketing, Technology, Infrastructure</title>
+<meta name="description" content="Marketing technology, AI agents, and the operational reality behind both. Open-source tools and essays by Rebecca Barton.">
+<meta property="og:title" content="dgtl dept*">
+<meta property="og:description" content="Marketing technology, AI agents, and the operational reality behind both. Open-source tools and essays by Rebecca Barton.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://dgtldept.github.io">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="dgtl dept*">
+<meta name="twitter:description" content="Marketing technology, AI agents, and the operational reality behind both. Open-source tools and essays by Rebecca Barton.">
+<link rel="canonical" href="https://dgtldept.github.io">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://dgtldept.github.io/#org",
+      "name": "dgtl dept*",
+      "url": "https://dgtldept.com",
+      "description": "Marketing technology, AI agents, and the operational reality behind both. Open-source tools and resources for marketing leaders.",
+      "founder": { "@id": "https://dgtldept.github.io/#person" },
+      "sameAs": [
+        "https://dgtldept.com",
+        "https://www.instagram.com/dgtldept",
+        "https://www.tiktok.com/@dgtldept",
+        "https://github.com/dgtldept"
+      ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://dgtldept.github.io/#person",
+      "name": "Rebecca Barton",
+      "alternateName": "Rebecca Rae Barton",
+      "url": "https://rebeccaraebarton.com",
+      "jobTitle": "Marketing Executive & Fractional CMO/CDO",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "RRBC",
+        "url": "https://rebeccaraebarton.com"
+      },
+      "knowsAbout": [
+        "Marketing Technology",
+        "AI Agents",
+        "E-commerce Operations",
+        "Growth Strategy",
+        "Shopify Plus",
+        "Klaviyo",
+        "Claude Code",
+        "Marketing Automation",
+        "Retail Media",
+        "DTC Strategy",
+        "Content Strategy"
+      ],
+      "sameAs": [
+        "https://linkedin.com/in/rebeccaraebarton",
+        "https://rebeccaraebarton.com",
+        "https://dgtldept.com",
+        "https://github.com/dgtldept",
+        "https://www.instagram.com/dgtldept",
+        "https://www.tiktok.com/@dgtldept"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://dgtldept.github.io/#website",
+      "name": "dgtl dept* — Open Source",
+      "url": "https://dgtldept.github.io",
+      "publisher": { "@id": "https://dgtldept.github.io/#org" }
+    }
+  ]
+}
+</script>
+<link href="https://api.fontshare.com/v2/css?f[]=switzer@300,400,500,600,700&display=swap" rel="stylesheet">
+<style>
+/* ─── FONTS ─── */
+@font-face {
+  font-family: 'PP Editorial New';
+  src: url('fonts/PPEditorialNew-Ultralight.woff2') format('woff2');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'PP Editorial New';
+  src: url('fonts/PPEditorialNew-UltralightItalic.woff2') format('woff2');
+  font-weight: 200;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'PP Editorial New';
+  src: url('fonts/PPEditorialNew-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'PP Editorial New';
+  src: url('fonts/PPEditorialNew-Italic.woff2') format('woff2');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Cartograph CF';
+  src: url('fonts/CartographCF-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ─── RESET & BASE ─── */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --accent: #5B5F8D;
+  --black: #000000;
+  --white: #ffffff;
+  --ease: cubic-bezier(0.215, 0.61, 0.355, 1);
+  --section-pad-x: clamp(40px, 5vw, 80px);
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: 'Switzer', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: clamp(15px, 1.1vw, 17px);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: var(--black);
+  color: var(--white);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--white);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ─── HEADER ─── */
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  padding: 1.2rem var(--section-pad-x);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: background-color 0.3s var(--ease), backdrop-filter 0.3s var(--ease);
+}
+
+.site-header.scrolled {
+  background-color: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.header-logo {
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--white);
+}
+
+.header-nav {
+  display: flex;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.header-nav a {
+  font-family: 'Cartograph CF', monospace;
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: var(--white);
+  text-transform: uppercase;
+  transition: opacity 0.2s var(--ease);
+}
+.header-nav a:hover {
+  opacity: 0.7;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 4px;
+}
+.hamburger span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--white);
+  transition: transform 0.3s var(--ease), opacity 0.3s var(--ease);
+}
+.hamburger.open span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.open span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+.mobile-nav {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--black);
+  z-index: 999;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+.mobile-nav.open {
+  display: flex;
+}
+.mobile-nav a {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--white);
+}
+
+/* ─── MAIN CONTENT ─── */
+.main {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto 1fr;
+  gap: 0 clamp(40px, 6vw, 100px);
+  align-items: start;
+  padding: 140px var(--section-pad-x) 80px;
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.left-col {
+  grid-row: 1 / 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: calc(100vh - 220px);
+}
+
+.right-col {
+  grid-row: 1 / 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: calc(100vh - 220px);
+}
+
+.wordmark {
+  width: 280px;
+  margin-bottom: 2rem;
+}
+
+.tagline {
+  font-family: 'PP Editorial New', 'Georgia', serif;
+  font-size: clamp(1.5rem, 2.5vw, 2.25rem);
+  font-weight: 200;
+  line-height: 1.3;
+  margin-bottom: 1.25rem;
+  letter-spacing: -0.01em;
+}
+
+.subtitle {
+  font-size: clamp(0.875rem, 1.1vw, 1rem);
+  font-weight: 300;
+  line-height: 1.55;
+  opacity: 1;
+  max-width: 480px;
+}
+
+.bio {
+  margin-top: 2.5rem;
+  font-size: 0.85rem;
+  font-weight: 300;
+  line-height: 1.6;
+  opacity: 0.6;
+  max-width: 420px;
+}
+
+.bio a {
+  opacity: 1;
+  color: var(--white);
+  text-decoration: underline;
+  text-decoration-color: rgba(255,255,255,0.3);
+  text-underline-offset: 3px;
+  transition: text-decoration-color 0.2s var(--ease);
+}
+.bio a:hover {
+  text-decoration-color: var(--accent);
+}
+
+/* ─── SECTION LABEL ─── */
+.section-label {
+  font-family: 'Cartograph CF', monospace;
+  font-size: 0.7rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.13em;
+  opacity: 0.6;
+  margin-bottom: 1.5rem;
+}
+
+/* ─── LINK CARDS ─── */
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+  width: 100%;
+}
+
+.links a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.875rem 1.5rem;
+  border: 1px solid rgba(255,255,255,0.85);
+  border-radius: 45px;
+  font-family: 'Cartograph CF', monospace;
+  font-size: 0.8rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  transition: border-color 0.2s var(--ease), background 0.2s var(--ease);
+}
+
+.links a:hover {
+  border-color: var(--accent);
+  background: rgba(91, 95, 141, 0.08);
+}
+
+.links a .link-label {
+  opacity: 0.6;
+  font-size: 0.7rem;
+  text-transform: none;
+}
+
+/* ─── FOOTER ─── */
+.site-footer {
+  padding: clamp(40px, 4vw, 60px) var(--section-pad-x) 2rem;
+  background: #000000;
+  color: #ffffff;
+}
+
+.footer-bottom {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  padding-bottom: 3rem;
+}
+
+.footer-socials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  align-items: center;
+}
+.footer-socials a {
+  font-family: 'Cartograph CF', monospace;
+  font-size: 0.85rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #ffffff;
+  transition: opacity 0.2s var(--ease);
+}
+.footer-socials a:hover {
+  opacity: 0.7;
+}
+
+.footer-cta {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 2rem;
+}
+
+.footer-cta-text {
+  font-family: 'PP Editorial New', 'Georgia', serif;
+  font-size: clamp(1.5rem, 2.5vw, 2.5rem);
+  font-weight: 200;
+  line-height: 1.2;
+  text-align: right;
+}
+
+.footer-cta-btn {
+  display: inline-block;
+  font-family: 'Cartograph CF', monospace;
+  font-size: 1.25rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  padding: 1.25rem 1.75rem;
+  border: 1px solid #ffffff;
+  border-radius: 45px;
+  color: #ffffff;
+  background: transparent;
+  transition: background 0.2s var(--ease), color 0.2s var(--ease);
+  white-space: nowrap;
+}
+.footer-cta-btn:hover {
+  background: #ffffff;
+  color: #000000;
+}
+
+.footer-bar {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  font-family: 'Cartograph CF', monospace;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  opacity: 0.5;
+}
+
+/* ─── RESPONSIVE: TABLET ─── */
+@media (max-width: 900px) {
+  .main {
+    grid-template-columns: 1fr;
+    text-align: center;
+    align-items: center;
+    padding-top: 120px;
+  }
+
+  .left-col {
+    grid-row: auto;
+    min-height: auto;
+    align-items: center;
+    margin-bottom: 3rem;
+  }
+
+  .right-col {
+    grid-row: auto;
+    min-height: auto;
+    align-items: center;
+  }
+
+  .subtitle, .bio {
+    max-width: 520px;
+    text-align: center;
+  }
+
+  .bio {
+    border-top: none;
+    padding-top: 0;
+    margin-top: 1.5rem;
+  }
+
+  .section-label {
+    text-align: center;
+  }
+
+  .links {
+    max-width: 440px;
+  }
+}
+
+/* ─── RESPONSIVE: MOBILE ─── */
+@media (max-width: 700px) {
+  :root {
+    --section-pad-x: 20px;
+  }
+
+  .header-nav { display: none; }
+  .hamburger { display: flex; }
+
+  .main {
+    padding-top: 100px;
+    padding-bottom: 60px;
+  }
+
+  .wordmark {
+    width: 240px;
+  }
+
+  .links a {
+    padding: 0.75rem 1.25rem;
+    font-size: 0.75rem;
+  }
+
+  .footer-bottom {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .footer-cta {
+    justify-content: flex-start;
+  }
+  .footer-cta-text {
+    text-align: left;
+  }
+  .footer-bar {
+    flex-direction: column;
+    gap: 0.25rem;
+    text-align: left;
+  }
+
+  .site-footer {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media (max-width: 390px) {
+  :root {
+    --section-pad-x: 16px;
+  }
+
+  .wordmark {
+    width: 200px;
+  }
+
+  .footer-cta-btn {
+    font-size: 1rem;
+    padding: 1rem 1.25rem;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════ HEADER ═══════════════════ -->
+<header class="site-header" id="siteHeader">
+  <a href="#" class="header-logo">dgtl dept*</a>
+  <nav class="header-nav">
+    <a href="https://dgtldept.com" target="_blank" rel="noopener">Substack &#8599;</a>
+    <a href="https://github.com/dgtldept" target="_blank" rel="noopener">GitHub &#8599;</a>
+    <a href="https://rebeccaraebarton.com" target="_blank" rel="noopener">RRBC &#8599;</a>
+  </nav>
+  <button class="hamburger" id="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<nav class="mobile-nav" id="mobileNav">
+  <a href="https://dgtldept.com" target="_blank" rel="noopener" onclick="closeMobileNav()">Substack</a>
+  <a href="https://github.com/dgtldept" target="_blank" rel="noopener" onclick="closeMobileNav()">GitHub</a>
+  <a href="https://rebeccaraebarton.com" target="_blank" rel="noopener" onclick="closeMobileNav()">RRBC</a>
+  <a href="https://linkedin.com/in/rebeccaraebarton" target="_blank" rel="noopener" onclick="closeMobileNav()">LinkedIn</a>
+</nav>
+
+<!-- ═══════════════════ MAIN ═══════════════════ -->
+<main class="main">
+  <div class="left-col">
+    <img src="dgtl-dept-wordmark-dark.png" alt="dgtl dept*" class="wordmark">
+    <p class="tagline">Marketing technology, AI agents, and the operational reality behind both.</p>
+    <p class="bio">An active project from <a href="https://rebeccaraebarton.com">Rebecca Rae Barton</a> &mdash; marketing executive, operator, and builder with 12+ years running digital P&amp;Ls across DTC, marketplace, and luxury retail. Find her anywhere chronically online millennials are sold.</p>
+  </div>
+  <div class="right-col">
+    <p class="section-label">Links</p>
+    <div class="links">
+      <a href="https://dgtldept.com" target="_blank" rel="noopener">Substack <span class="link-label">newsletter</span></a>
+      <a href="https://github.com/dgtldept" target="_blank" rel="noopener">GitHub <span class="link-label">open-source tools</span></a>
+      <a href="https://linkedin.com/in/rebeccaraebarton" target="_blank" rel="noopener">LinkedIn <span class="link-label">Rebecca Barton</span></a>
+      <a href="https://rebeccaraebarton.com" target="_blank" rel="noopener">Website <span class="link-label">rebeccaraebarton.com</span></a>
+      <a href="https://instagram.com/dgtldept" target="_blank" rel="noopener">Instagram <span class="link-label">@dgtldept</span></a>
+      <a href="https://tiktok.com/@dgtldept" target="_blank" rel="noopener">TikTok <span class="link-label">@dgtldept</span></a>
+    </div>
+  </div>
+</main>
+
+<!-- ═══════════════════ FOOTER ═══════════════════ -->
+<footer class="site-footer">
+  <div class="footer-bottom">
+    <div class="footer-socials">
+      <a href="https://github.com/dgtldept" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://dgtldept.com" target="_blank" rel="noopener">Substack</a>
+      <a href="https://linkedin.com/in/rebeccaraebarton" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://instagram.com/dgtldept" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://tiktok.com/@dgtldept" target="_blank" rel="noopener">TikTok</a>
+    </div>
+    <div class="footer-cta">
+      <div class="footer-cta-text">Do you like<br>what you see?</div>
+      <a href="https://www.rebeccaraebarton.com/connect" target="_blank" rel="noopener" class="footer-cta-btn">Connect &#8599;</a>
+    </div>
+  </div>
+
+  <div class="footer-bar">
+    <span>Brooklyn, NY</span>
+    <span>Thanks! I made it myself &#10024;</span>
+    <span>2026 &reg; Rebecca Rae Barton</span>
+  </div>
+</footer>
+
+<!-- ═══════════════════ JAVASCRIPT ═══════════════════ -->
+<script>
+/* ─── MOBILE NAV ─── */
+const hamburger = document.getElementById('hamburger');
+const mobileNav = document.getElementById('mobileNav');
+
+hamburger.addEventListener('click', () => {
+  hamburger.classList.toggle('open');
+  mobileNav.classList.toggle('open');
+  document.body.style.overflow = mobileNav.classList.contains('open') ? 'hidden' : '';
+});
+
+function closeMobileNav() {
+  hamburger.classList.remove('open');
+  mobileNav.classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+/* ─── SMART HEADER ─── */
+(function() {
+  const header = document.getElementById('siteHeader');
+  let ticking = false;
+
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      requestAnimationFrame(() => {
+        if (window.scrollY > 80) {
+          header.classList.add('scrolled');
+        } else {
+          header.classList.remove('scrolled');
+        }
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+})();
+</script>
+</body>
+</html>

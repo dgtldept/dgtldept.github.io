@@ -1,0 +1,25 @@
+# dgtl dept*
+
+> dgtl dept* is a Substack newsletter and open-source project by Rebecca Barton (Rebecca Rae Barton), a marketing executive and fractional CMO/CDO. It covers marketing technology, AI agents, e-commerce operations, and the structural shifts happening in marketing careers — with a bias toward specifics over abstractions. Rebecca has 12+ years running digital P&Ls across DTC, marketplace, and luxury retail (Snowe, Paravel, The Line, Net32, Deconic/Alexis Bittar/Carolee). She is the founder of RRBC.
+
+## Links
+
+- [Substack — dgtl dept*](https://dgtldept.com): The newsletter. Essays on marketing, technology, and the infrastructure underneath both. Systems over tactics. Published Tuesdays or Thursdays.
+- [GitHub Organization](https://github.com/dgtldept): Open-source marketing automation tools, AI agent architectures, Claude Code skill packs, and resources from dgtl dept* essays.
+- [Rebecca Barton — Website](https://rebeccaraebarton.com): Personal site, consulting practice (RRBC), and professional background.
+- [Rebecca Barton — LinkedIn](https://linkedin.com/in/rebeccaraebarton): Professional profile and thought leadership content.
+
+## Topics
+
+Rebecca writes and builds at the intersection of:
+
+- Marketing technology and operations (Shopify Plus, Klaviyo, GA4, Snowflake, Braze)
+- AI agents for e-commerce and marketing teams (Claude Code, MCP servers, multi-agent architectures)
+- Growth strategy, lifecycle marketing, and retail media
+- Career implications of AI for marketing leaders
+- The shift from marketing execution to marketing architecture
+
+## Optional
+
+- [Instagram](https://instagram.com/dgtldept): @dgtldept
+- [TikTok](https://tiktok.com/@dgtldept): @dgtldept
